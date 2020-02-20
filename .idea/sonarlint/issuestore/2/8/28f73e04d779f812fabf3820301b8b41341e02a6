@@ -1,0 +1,4 @@
+
+½%squid:RedundantThrowsDeclarationCheck"„Remove the declaration of thrown exception 'org.springframework.security.core.AuthenticationException' which is a runtime exception.(àœƒÚ8ößÏˆ†.
+Lsquid:S1481"/Remove this unused "tokenParam" local variable.(Î‹¶/8³êÎˆ†.
+[squid:S1854">Remove this useless assignment to local variable "tokenParam".(Î‹¶/8³êÎˆ†.

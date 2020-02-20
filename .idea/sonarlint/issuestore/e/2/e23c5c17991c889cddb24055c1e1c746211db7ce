@@ -1,0 +1,13 @@
+
+bsquid:S22591"FA "NullPointerException" could be thrown; "allQuery" is nullable here.(ƒòàÎùÿÿÿÿ
+csquid:S2583Ë"DChange this condition so that it does not always evaluate to "false"(½Šš¸8â…·††.
+Fsquid:S1148q"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8·ÔÒø….
+Gsquid:S1148Â"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8âËøˆ†.
+Gsquid:S1148©"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8ãÛ€‰†.
+Jsquid:S1905\"'Remove this unnecessary cast to "User".(ê¯¬÷ýÿÿÿÿ8çÈâø….
+esquid:S2259«"FA "NullPointerException" could be thrown; "allQuery" is nullable here.(›žð¢8ãÛ€‰†.
+Gsquid:S1148ˆ"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8“ß¶ƒ†.
+?squid:S1148/"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+esquid:S2259Ä"FA "NullPointerException" could be thrown; "allQuery" is nullable here.(›žð¢8§¤ûˆ†.
+esquid:S2259Š"FA "NullPointerException" could be thrown; "allQuery" is nullable here.(‘£×ä8âŽãƒ†.
+Fsquid:S1148@"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8·ÔÒø….

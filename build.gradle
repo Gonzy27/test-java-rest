@@ -1,0 +1,48 @@
+plugins {
+    id 'java'
+    id 'war'
+    id 'org.springframework.boot' version '2.2.4.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.7.RELEASE'
+}
+
+group 'com.java.rest'
+version '1.0'
+
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+        mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-dependencies:2.0.5.RELEASE'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-devtools'
+    compile group: 'org.springframework', name: 'spring-orm', version: '5.1.6.RELEASE'
+
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '2.2.2.RELEASE'
+    compile group: 'io.jsonwebtoken', name: 'jjwt', version: '0.9.1'
+
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.0'
+    compile group: 'com.h2database', name: 'h2', version: '1.4.197'
+    compile group: 'org.hibernate', name: 'hibernate-core', version: '5.4.2.Final'
+    compile group: 'org.apache.tomcat', name: 'tomcat-dbcp', version: '9.0.1'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    components {
+        withModule('org.springframework:spring-beans') {
+            allVariants {
+                withDependencyConstraints {
+                    it.findAll { it.name == 'snakeyaml' }.each { it.version { strictly '1.19' } }
+                }
+            }
+        }
+    }
+}
