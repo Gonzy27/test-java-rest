@@ -24,8 +24,6 @@ import java.util.UUID;
 @Service
 public class PersonServiceImpl implements IPersonService {
 
-    Logger logger = LoggerFactory.getLogger(getClass());
-
     private BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
 
     @Autowired
