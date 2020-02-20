@@ -1,27 +1,0 @@
-
-|squid:S2293K"YReplace the type specification in this constructor call with the diamond operator ("<>").(º—Şÿÿÿÿÿ8Ìò…†.
-|squid:S2293}"YReplace the type specification in this constructor call with the diamond operator ("<>").(®©ÎÒûÿÿÿÿ8öÓÍş….
-|squid:S22935"YReplace the type specification in this constructor call with the diamond operator ("<>").(º—Şÿÿÿÿÿ8öÓÍş….
-Dsquid:S1452O"&Remove usage of generic wildcard type.(Ğñ–æ8öÓÍş….
-vsquid:S2293i"YReplace the type specification in this constructor call with the diamond operator ("<>").(·°åY8öÓÍş….
-|squid:S2293d"YReplace the type specification in this constructor call with the diamond operator ("<>").(¯ü½¥ÿÿÿÿÿ8öÓÍş….
-Dsquid:S1452m"&Remove usage of generic wildcard type.(¹Ú›8öÓÍş….
-|squid:S2293H"YReplace the type specification in this constructor call with the diamond operator ("<>").(şàßïÿÿÿÿÿ8Ìò…†.
-`squid:S1192+"IDefine a constant instead of duplicating this literal "mensaje" 11 times.(¯×î»
-|squid:S2293\"YReplace the type specification in this constructor call with the diamond operator ("<>").(®©ÎÒûÿÿÿÿ8öÓÍş….
-}squid:S2293ƒ"YReplace the type specification in this constructor call with the diamond operator ("<>").(şàßïÿÿÿÿÿ8öÓÍş….
-Dsquid:S1452#"&Remove usage of generic wildcard type.(ƒşÄ8öÓÍş….
-ƒsquid:S11921"`Define a constant instead of duplicating this literal " no existe en la base de datos!" 3 times.(ùÙ°™úÿÿÿÿ8Ìò…†.
-^squid:S4684O"@Replace this persistent entity with a simple POJO or DTO object.(Ğñ–æ8öÓÍş….
-wsquid:S2293—"YReplace the type specification in this constructor call with the diamond operator ("<>").(·°åY8öÓÍş….
-Dsquid:S14529"&Remove usage of generic wildcard type.(”¹ùı8Ìò…†.
-|squid:S2293C"YReplace the type specification in this constructor call with the diamond operator ("<>").(¯ü½¥ÿÿÿÿÿ8Ìò…†.
-^squid:S4684m"@Replace this persistent entity with a simple POJO or DTO object.(¹Ú›8öÓÍş….
-}squid:S2293¤"YReplace the type specification in this constructor call with the diamond operator ("<>").(¯ü½¥ÿÿÿÿÿ8öÓÍş….
-|squid:S22932"YReplace the type specification in this constructor call with the diamond operator ("<>").(şàßïÿÿÿÿÿ8öÓÍş….
-ksquid:S1858G"H"email" is already a string, there's no need to call "toString()" on it.(¬ÿÆŠÿÿÿÿÿ8ñ£ô…†.
-isquid:S1192,"FDefine a constant instead of duplicating this literal "error" 5 times.(ÕÓçòûÿÿÿÿ8öÓÍş….
-|squid:S2293-"YReplace the type specification in this constructor call with the diamond operator ("<>").(¯ü½¥ÿÿÿÿÿ8öÓÍş….
-}squid:S2293‘"YReplace the type specification in this constructor call with the diamond operator ("<>").(¯ü½¥ÿÿÿÿÿ8öÓÍş….
-xsquid:S2293©"YReplace the type specification in this constructor call with the diamond operator ("<>").(À”¨â8öÓÍş….
-Esquid:S1452›"&Remove usage of generic wildcard type.(İáÔ°8öÓÍş….
