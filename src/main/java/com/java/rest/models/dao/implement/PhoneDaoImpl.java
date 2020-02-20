@@ -44,7 +44,8 @@ public class PhoneDaoImpl implements IPhoneDao {
 
             allQuery = session.createQuery(selectAll);
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error("Error finding all phones");
+            throw new RuntimeException(e);
         }
 
         List<Phone> phonesResult;
@@ -68,7 +69,8 @@ public class PhoneDaoImpl implements IPhoneDao {
             phone = session.find(Phone.class, id);
 
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error("Error finding a user by id");
+            throw new RuntimeException(e);
         }
         return phone;
     }
@@ -85,7 +87,8 @@ public class PhoneDaoImpl implements IPhoneDao {
             session.getTransaction().commit();
 
         } catch (Exception e) {
-            logger.error("Error saving new phone", e);
+            logger.error("Error saving the new phone");
+            throw new RuntimeException(e);
         }
         return phone;
     }
@@ -104,7 +107,8 @@ public class PhoneDaoImpl implements IPhoneDao {
             session.getTransaction().commit();
 
         } catch (Exception e) {
-            logger.error("Error updating new phone", e);
+            logger.error("Error updating the phone");
+            throw new RuntimeException(e);
         }
         return personMerged;
     }
@@ -122,7 +126,8 @@ public class PhoneDaoImpl implements IPhoneDao {
 
             session.getTransaction().commit();
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error("Error deleting the phone");
+            throw new RuntimeException(e);
         }
     }
 

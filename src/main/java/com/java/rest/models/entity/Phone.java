@@ -16,8 +16,10 @@ public class Phone implements Serializable {
 
     @NotNull(message = "The number field cannot be empty")
     private Integer number;
+
     @NotNull(message = "The city code field cannot be empty")
     private Integer cityCode;
+
     @NotNull(message = "The country code field cannot be empty")
     private Integer contryCode;
 

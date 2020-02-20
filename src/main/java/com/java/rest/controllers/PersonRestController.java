@@ -22,11 +22,6 @@ public class PersonRestController {
     @Autowired
     private IPersonService personService;
 
-    @GetMapping("/hola")
-    public String hola() {
-        return "hola";
-    }
-
     @GetMapping(value = "/users", produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Person> index() {
         return personService.findAll();
@@ -60,7 +55,9 @@ public class PersonRestController {
         Map<String, Object> response = new HashMap<>();
 
         try {
+
             personNew = personService.save(person);
+
         } catch (Exception e) {
             response.put("message", "Error when inserting the new user in the database: " + e.getLocalizedMessage());
             return new ResponseEntity<>(response, HttpStatus.INTERNAL_SERVER_ERROR);
@@ -75,7 +72,6 @@ public class PersonRestController {
     public ResponseEntity<?> update(@Valid @RequestBody Person person, BindingResult result, @PathVariable UUID id) {
 
         Person personActual = personService.findById(id);
-
         Person personUpdated;
 
         Map<String, Object> response = new HashMap<>();

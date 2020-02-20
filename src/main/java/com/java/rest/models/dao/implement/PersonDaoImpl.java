@@ -16,6 +16,7 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -32,7 +33,7 @@ public class PersonDaoImpl implements IPersonDao {
     @Override
     public List<Person> findAll() {
         Session session;
-        Query<Person> allQuery = null;
+        Query<Person> allQuery;
         try {
 
             session = getSession();
@@ -46,15 +47,22 @@ public class PersonDaoImpl implements IPersonDao {
 
             allQuery = session.createQuery(selectAll);
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error("Error finding all users");
+            throw new RuntimeException(e);
         }
-        return allQuery.list();
+        List<Person> personList;
+        try {
+            personList = allQuery.list();
+        } catch (NoResultException e) {
+            return Collections.emptyList();
+        }
+        return personList;
     }
 
     @Override
     public Person findById(UUID id) {
 
-        Person person = null;
+        Person person;
         Session session;
         try {
             session = getSession();
@@ -64,7 +72,8 @@ public class PersonDaoImpl implements IPersonDao {
             person = session.find(Person.class, id);
 
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error("Error finding a user by id");
+            throw new RuntimeException(e);
         }
         return person;
     }
@@ -81,7 +90,8 @@ public class PersonDaoImpl implements IPersonDao {
             session.getTransaction().commit();
 
         } catch (Exception e) {
-            logger.error("Error saving new person", e);
+            logger.error("Error saving the new user");
+            throw new RuntimeException(e);
         }
         return person;
     }
@@ -89,7 +99,7 @@ public class PersonDaoImpl implements IPersonDao {
     @Override
     public Person update(Person person) {
         Session session;
-        Person personMerged = null;
+        Person personMerged;
         try {
             session = getSession();
             if (!session.getTransaction().isActive()) {
@@ -100,7 +110,8 @@ public class PersonDaoImpl implements IPersonDao {
             session.getTransaction().commit();
 
         } catch (Exception e) {
-            logger.error("Error saving new person", e);
+            logger.error("Error updating the user");
+            throw new RuntimeException(e);
         }
         return personMerged;
     }
@@ -118,14 +129,15 @@ public class PersonDaoImpl implements IPersonDao {
 
             session.getTransaction().commit();
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error("Error deleting the user");
+            throw new RuntimeException(e);
         }
     }
 
     @Override
     public Optional login(String email) {
         Session session;
-        Query<Person> allQuery = null;
+        Query<Person> allQuery;
 
         try {
             session = getSession();
@@ -145,7 +157,8 @@ public class PersonDaoImpl implements IPersonDao {
 
             allQuery = session.createQuery(selectAll);
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error("Error when login");
+            throw new RuntimeException(e);
         }
         Person personFound;
         try {
@@ -159,7 +172,7 @@ public class PersonDaoImpl implements IPersonDao {
     @Override
     public Optional findByToken(String token) {
         Session session;
-        Query<Person> allQuery = null;
+        Query<Person> allQuery;
 
         try {
             session = getSession();
@@ -177,7 +190,8 @@ public class PersonDaoImpl implements IPersonDao {
             allQuery = session.createQuery(selectAll);
 
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error("Error when logout");
+            throw new RuntimeException(e);
         }
         Person personFound;
         try {

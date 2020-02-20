@@ -38,7 +38,8 @@ public class Person implements Serializable {
     private String email;
 
     @NotEmpty(message = "The password field cannot be empty")
-    @Pattern(regexp = "^(?=.*[0-9]{2})(?=.*[a-z])(?=.*[A-Z]{1,}).{1,}$", message = "The password doesnt have the right forma (at least one uppercase letter, at least two numbers and one lower case number)")
+    @Pattern(regexp = "^(?=.*[0-9]{2})(?=.*[a-z])(?=.*[A-Z]{1,}).{1,}$",
+            message = "The password doesnt have the right forma (at least one uppercase letter, at least two numbers and one lower case number)")
     private String password;
 
     @Temporal(TemporalType.TIMESTAMP)
